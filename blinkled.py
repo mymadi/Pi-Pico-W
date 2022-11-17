@@ -1,4 +1,4 @@
-"""Example for Pico. Turns on the built-in LED."""
+"""Example for Pico. Turns on the built-in LED"""
 import time
 import board
 import digitalio
