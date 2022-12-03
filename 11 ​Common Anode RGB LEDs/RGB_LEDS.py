@@ -1,5 +1,5 @@
 """
-Example for Pico. Common Anode RGB LEDs
+Example for Pico. Common Anode RGB LEDs.
 
 Additional Library:
     - adafruit_rgbled.mpy
