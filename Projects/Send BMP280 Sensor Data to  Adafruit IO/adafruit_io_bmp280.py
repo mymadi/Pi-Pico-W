@@ -4,6 +4,8 @@ Pi Pico W with Adafruit IO + BMP280 Sensor
 Additional Library:
  - adafruit_bmp280.mpy
  - adafruit_io
+ - adafruit_minimqtt
+ - adafruit_register
  
 References:
 [1] https://learn.adafruit.com/pico-w-wifi-with-circuitpython/pico-w-with-adafruit-io
