@@ -1,5 +1,5 @@
 '''
-Grove OLED Display with DHT22 and BMP280 Sesnsor
+Grove OLED Display with DHT22 and BMP280 Sensor
 Additional Libraries
     – adafruit_display_text
     – adafruit_displayio_ssd1306.mpy
@@ -8,6 +8,8 @@ Additional Libraries
 
 Reference:
 [1] https://image.online-convert.com/convert-to-bmp
+
+NOTE: Upload the Image (battery.bmp) to CIRCUITPY folder
 '''
 
 import time
