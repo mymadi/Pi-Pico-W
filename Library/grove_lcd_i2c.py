@@ -1,3 +1,4 @@
+# Library for Grove I2C LCD
 from board import *
 import digitalio
 import busio
