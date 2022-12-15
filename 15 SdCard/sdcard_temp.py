@@ -35,8 +35,8 @@ while True:
     with open("/sd/temperature.txt", "a") as f:
         led.value = True  # turn on LED to indicate we're writing to the file
         temp = microcontroller.cpu.temperature
-        print("Temperature = %0.2f" % temp)
-        f.write("%0.2f\n" % temp)
+        print("Temperature: {:.2f} °C".format(temp))
+        f.write('{:.2f}\n'.format(temp))
         led.value = False  # turn off LED to indicate we're done
     # file is saved
     time.sleep(5)
