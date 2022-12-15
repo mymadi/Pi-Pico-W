@@ -70,7 +70,6 @@ while True:
         temp = round(dhtval[0],2)
         humi = round(dhtval[1],2)
         lux = round(luxval,2)
-        temp = microcontroller.cpu.temperature
         
         f.write("{:.2f}, {:.2f}, {:.2f}\n".format(temp,humi,lux))
         led.value = False  # turn off LED to indicate we're done
