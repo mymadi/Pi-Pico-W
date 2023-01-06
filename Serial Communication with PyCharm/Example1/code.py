@@ -1,5 +1,5 @@
 """
-CircuitPython Essentials UART Serial example
+CircuitPython Essentials UART Serial example: using UART read()
 """
 
 import board
