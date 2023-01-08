@@ -16,3 +16,4 @@ while True:
     byte_read = uart.readline()     
     if byte_read is not None:
         print(byte_read)
+        print(byte_read.decode())
