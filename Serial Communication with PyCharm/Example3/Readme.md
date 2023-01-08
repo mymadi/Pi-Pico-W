@@ -1,1 +1,0 @@
-# Serial Communication using PyCharm
