@@ -5,6 +5,7 @@ CircuitPython Essentials UART Serial example using readline
 import board
 import busio
 import time
+import os
 
 # UART
 uart = busio.UART(board.GP4, board.GP5, timeout=0.1,baudrate=9600)
