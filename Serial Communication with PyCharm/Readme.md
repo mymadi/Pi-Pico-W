@@ -1,6 +1,14 @@
 # Serial Communication using PyCharm
 
+Software Installed at PC:
 Link: https://www.jetbrains.com/pycharm/
+
+Software used to Program Pi Pico W:
+Link: https://thonny.org/
+
+Components (Please Check your Port Number at 'Device Manager':
+- USB to serial
+- Bluetooth HC05 (Default Password: 0000 or 1234 and Default Baudrate: 9600)
 
 ## Example 1
 PyCharm<b>--></b>Pi Pico
