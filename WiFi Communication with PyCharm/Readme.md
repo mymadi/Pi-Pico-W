@@ -5,6 +5,7 @@ Link: https://www.jetbrains.com/pycharm/
 
 Software used to Program Pi Pico W:
 Link: https://thonny.org/
+
 Reference: https://github.com/anecdata/Socket
 
 ## Example 1
