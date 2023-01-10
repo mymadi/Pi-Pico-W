@@ -1,9 +1,11 @@
 # WiFi Communication between PyCharm and Pi Pico W
 
 Python IDE for PC:
+
 Link: https://www.jetbrains.com/pycharm/
 
 Python IDE for Pi Pico W:
+
 Link: https://thonny.org/
 
 Programming Language: https://circuitpython.org/board/raspberry_pi_pico_w/
