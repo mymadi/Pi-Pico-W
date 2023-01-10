@@ -1,10 +1,12 @@
 # Serial Communication using PyCharm
 
-Software Installed at PC:
+Python IDE for PC:
 Link: https://www.jetbrains.com/pycharm/
 
-Software used to Program Pi Pico W:
+Python IDE for Pi Pico W:
 Link: https://thonny.org/
+
+Programming Language: https://circuitpython.org/board/raspberry_pi_pico_w/
 
 Components (Please Check your Port Number at 'Device Manager':
 - USB to serial
