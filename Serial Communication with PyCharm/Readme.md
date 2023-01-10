@@ -8,7 +8,7 @@ Link: https://thonny.org/
 
 Programming Language: https://circuitpython.org/board/raspberry_pi_pico_w/
 
-Components (Please Check your Port Number at 'Device Manager':
+Components (Please Check your Port Number at 'Device Manager'):
 - USB to serial
 - Bluetooth HC05 (Default Password: 0000 or 1234 and Default Baudrate: 9600)
 
