@@ -9,7 +9,8 @@ Programming Language: https://circuitpython.org/board/raspberry_pi_pico_w/
 Reference: https://github.com/anecdata/Socket
 
 ## TCP vs UDP
-https://www.youtube.com/watch?v=uwoD5YsGACg
+- https://www.youtube.com/watch?v=uwoD5YsGACg
+- https://www.youtube.com/watch?v=2QGgEk20RXM
 
 
 ## Example 1 (TCP)
