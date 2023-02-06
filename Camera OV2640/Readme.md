@@ -1,6 +1,6 @@
 # OV2640 Camera with Pi Pico W
 
-**This project:
+**This project:**
 1) Display an image from the camera and display it on a 1.8-inch 128x160 TFT LCD Breakout - ST7735
 2) Capture an image from the camera with 5 seconds delay and save to SD Card.
 
