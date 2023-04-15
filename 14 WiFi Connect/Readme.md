@@ -1,2 +1,2 @@
-# How to Create .env File?
-https://learn.adafruit.com/pico-w-wifi-with-circuitpython/create-your-environmental-variables-env-file
+# How to Create Environment File?
+https://docs.circuitpython.org/en/latest/docs/environment.html
