@@ -1,8 +1,8 @@
 '''
 Test Basic WiFi for Pi Pico W
 
-How to create .env file?
-https://learn.adafruit.com/pico-w-wifi-with-circuitpython/create-your-environmental-variables-env-file
+How to create environment file?
+https://docs.circuitpython.org/en/latest/docs/environment.html
 '''
 
 import os
@@ -10,10 +10,10 @@ import ipaddress
 import wifi
 import socketpool
 
-print(os.getenv('test_env_file'))
-
-ssid = os.getenv('WIFI_SSID')
-password = os.getenv('WIFI_PASSWORD')
+# Get wifi details from a settings.toml file
+print(os.getenv("test_env_file"))
+ssid = os.getenv("WIFI_SSID")
+password = os.getenv("WIFI_PASSWORD")
 
 print("Connecting to WiFi '{}' ... ".format(ssid), end="")
 
