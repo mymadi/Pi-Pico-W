@@ -1,4 +1,4 @@
-# PyCharm: TCP_Client connected with Pi Pico W as Server.
+# PyCharm: TCP_Client connected with Pi Pico W as Server
 # Reference: https://github.com/anecdata/Socket/blob/main/examples/tcp_client_CPython.py
 
 import socket
