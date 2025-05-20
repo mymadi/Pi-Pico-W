@@ -12,8 +12,8 @@ import adafruit_ntp  # Import NTP library
 import rtc
 
 # --- Wi-Fi Configuration ---
-WIFI_SSID = "mymadi_2.4G"
-WIFI_PASSWORD = "mymadi1234567"  # Your Wi-Fi Password
+WIFI_SSID = "YOUR SSID"
+WIFI_PASSWORD = "SSID PASSWORD"  # Your Wi-Fi Password
 SERVER_PORT = 5000  # Define the port
 
 print("Connecting to WiFi...")
