@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMP280 Live Data Graphs</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .graph-container {
+            display: flex;
+            flex-direction: column; /* Stack graphs vertically */
+            gap: 20px; /* Space between graphs */
+            margin: 20px auto;
+            width: 95%;
+            max-width: 1000px; /* Max width for a single graph */
+        }
+        .plot-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 10px;
+            box-sizing: border-box;
+            height: 350px; /* Fixed height for each plot */
+        }
+    </style>
+</head>
+<body>
+    <h1>Live BMP280 Sensor Data Trends</h1>
+    <div class="graph-container">
+        <div id="pressure-plot" class="plot-item"></div>
+        <div id="altitude-plot" class="plot-item"></div>
+        <div id="temperature-plot" class="plot-item"></div>
+    </div>
+
+    <script>
+        // Define the plot div elements
+        let pressurePlotDiv = document.getElementById('pressure-plot');
+        let altitudePlotDiv = document.getElementById('altitude-plot');
+        let temperaturePlotDiv = document.getElementById('temperature-plot');
+
+        // --- Initialize Graphs ---
+
+        // Pressure Graph
+        Plotly.newPlot(pressurePlotDiv, [{
+            x: [],
+            y: [],
+            mode: 'lines',
+            name: 'Pressure',
+            line: { color: 'blue' }
+        }], {
+            title: 'Pressure (hPa)',
+            xaxis: { title: 'Time', type: 'date' },
+            yaxis: { title: 'Pressure (hPa)', automargin: true },
+            margin: { t: 40, b: 40, l: 50, r: 20 },
+            responsive: true
+        });
+
+        // Altitude Graph
+        Plotly.newPlot(altitudePlotDiv, [{
+            x: [],
+            y: [],
+            mode: 'lines',
+            name: 'Altitude',
+            line: { color: 'green' }
+        }], {
+            title: 'Altitude (meters)',
+            xaxis: { title: 'Time', type: 'date' },
+            yaxis: { title: 'Altitude (m)', automargin: true },
+            margin: { t: 40, b: 40, l: 50, r: 20 },
+            responsive: true
+        });
+
+        // Temperature Graph
+        Plotly.newPlot(temperaturePlotDiv, [{
+            x: [],
+            y: [],
+            mode: 'lines',
+            name: 'Temperature',
+            line: { color: 'red' }
+        }], {
+            title: 'Temperature (&deg;C)',
+            xaxis: { title: 'Time', type: 'date' },
+            yaxis: { title: 'Temperature (&deg;C)', automargin: true },
+            margin: { t: 40, b: 40, l: 50, r: 20 },
+            responsive: true
+        });
+
+
+        // Function to fetch data from the microcontroller and update the graphs
+        function fetchDataAndPlot() {
+            fetch('/data')
+                .then(response => response.json())
+                .then(sensorData => {
+                    if (sensorData.time && sensorData.time.length > 0) {
+                        Plotly.extendTraces(pressurePlotDiv, {
+                            x: [sensorData.time.slice(-1)],
+                            y: [[sensorData.pressure[sensorData.pressure.length - 1]]]
+                        }, [0], sensorData.time.length > 50);
+
+                        Plotly.extendTraces(altitudePlotDiv, {
+                            x: [sensorData.time.slice(-1)],
+                            y: [[sensorData.altitude[sensorData.altitude.length - 1]]]
+                        }, [0], sensorData.time.length > 50);
+
+                        Plotly.extendTraces(temperaturePlotDiv, {
+                            x: [sensorData.time.slice(-1)],
+                            y: [[sensorData.temperature[sensorData.temperature.length - 1]]]
+                        }, [0], sensorData.time.length > 50);
+                    }
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        setInterval(fetchDataAndPlot, 2000);
+    </script>
+</body>
+</html>
